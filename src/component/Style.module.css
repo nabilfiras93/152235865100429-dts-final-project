@@ -1,0 +1,15 @@
+/* body{
+    background-image: './computer.jpg';
+} */
+
+.body{
+    /* background-color: #484848; */
+    background: url('./495500274.jpg');
+    background-size: 100%;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}

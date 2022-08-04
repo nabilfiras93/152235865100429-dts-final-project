@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Home from './Views/Home';
+import PageDetail from './Views/PageDetail';
+import Login from './Views/Login';
+import Register from './Views/Register';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>    
+        <Route path="/" element={<Home/>}/>
+        <Route path="/makanan/:id" element={<PageDetail/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register/>}/>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
